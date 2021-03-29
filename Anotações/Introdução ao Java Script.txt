@@ -1,0 +1,63 @@
+Script Incorporado :
+    Quando o arquivo JS está no mesmo arquivo html
+
+As variavaies sao fracamente Tipadas:
+
+    Nao declaramos o tipo de dado da variavel junto com ela.
+    Podemos criar uma variavel como texto e depois transformar ela com os segunites comandos
+
+    Funções de Conversão: 
+        parseInt, parseFloat, toString
+variaveis:  :
+
+
+    var : declarar variaveis
+    
+    let : decalarar variaveis definindo o escopo de atuação, leva em 
+        consideração o escopo em que a variavel foi definida, o bloco que ela foi definida.
+        A variavel fica "visivel" para aquele bloco especifico.
+
+    const : declarar constatnte, o valor nao poderá mudar.
+
+Numeros:
+
+    Numeros em Java Scriptsao do tipo Number, TANTO DECIMAL OU INTEIRO
+
+Objetos:
+    Array, datas e outros..
+
+Array:
+
+    Armazenando mais de um valor
+
+tyoeOf:
+
+    Tipo de dado da variavel
+
+Boolean:
+    True ou false
+
+Operadores Lógicos
+    and && :
+     duas condições tem que ser verdadeiras
+    or || :
+        é o perador ou, se qualquer um dos termos for verdadeiro o resultado
+        é verdadeiro
+
+Operador de incrementação ou de tirar
+    ++:
+        incrementação
+    --:
+        reitro
+
+for:
+    for(valor inicial; valor final; incremento){
+        instruções
+    }
+
+continue:
+
+    similiar ao break, porem ignora e vai para o proximo
+
+Template String:
+    são as crases, `recurso incrivel do ${js}`
