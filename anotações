@@ -1,0 +1,53 @@
+Linguagem reativa :     
+    dependemos da ação do usuário
+
+return:
+    encerra a função e retonra um valor
+
+Parâmetros :
+    são informações que as funções precisam
+
+Argumentos ou args:
+    permitem acessar Parâmetrosde uma função
+
+eval:
+    Pega uma string e entende o que eu quero fazer, por exemplo uma soma
+
+    ex: function calc(n1, n2, operator){
+    return eval (`${n1} ${operator} ${n2}`)
+    }
+
+Arrow function:
+    é um novo recurso para funções
+
+callback:
+    função de retonro como parametro apos uma ação
+
+Eventos:
+    Ações realizadas na aplicação que dispara rotinas
+
+Window:
+    manipulamos a aplicação
+
+TimeStamp:
+    quantidade de segundos desde 1970
+
+Array:
+    variavel indexada
+
+Classe:
+    ira engolbar todos os assuntos em comum.dentro das classes temos funçõs e variaveis, 
+    variaveis sao chamadas de atributos e funções de métodos
+
+    this:
+        é um comando interno da classe usado para referenciar, pra chamar atributos
+        e metodos da mesma classe
+
+    Instância:
+        é quando o objeto representa uma classe.
+
+       ex: let calculador = new calculadora 
+
+       tudo da classe esta dentro desse objeto.
+
+Quanto mais inteligente for sua classe mais limpo sera seu codigo
