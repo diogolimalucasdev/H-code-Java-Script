@@ -1,53 +1,38 @@
-Linguagem reativa :     
-    dependemos da ação do usuário
+Instância:
+    o objeto sempre representa a classe, Instância é o nome dado a este processo
 
-return:
-    encerra a função e retonra um valor
+Poo:
+    Programação Orientada a Objetos
+    beneficios:praticidade, reutilização e abstração
 
-Parâmetros :
-    são informações que as funções precisam
+Mvc:
+    Model View Controller
 
-Argumentos ou args:
-    permitem acessar Parâmetrosde uma função
+    model : 
+        dados, trata os dados, vai te o banco de dados, acesso ao dados
 
-eval:
-    Pega uma string e entende o que eu quero fazer, por exemplo uma soma
+    View:
+        O que você ta vendo,Interface que o usuario interage
 
-    ex: function calc(n1, n2, operator){
-    return eval (`${n1} ${operator} ${n2}`)
-    }
+    Controller:
+        Regra de negocios, o que deve ou nao acontecer
+ 
+Colocar os scripts em ordem para poder reutilizar uma classe
 
-Arrow function:
-    é um novo recurso para funções
+Encapsulamento:
+    Controla o acesso a um atributo ou método
 
-callback:
-    função de retonro como parametro apos uma ação
+    Os Tipos comuns de Encapsulamento:
+        public, protected, private
+            PUBLIC:
+                todos acessam
+            Protected:
+                Tributos e métodos da mesma classe e classe pai 
+            Private:
+                Somente atributos e métodos da própria classe
+                
+                ex: this._displayCal = "0"; // 
+                O _ representa o private
 
-Eventos:
-    Ações realizadas na aplicação que dispara rotinas
-
-Window:
-    manipulamos a aplicação
-
-TimeStamp:
-    quantidade de segundos desde 1970
-
-Array:
-    variavel indexada
-
-Classe:
-    ira engolbar todos os assuntos em comum.dentro das classes temos funçõs e variaveis, 
-    variaveis sao chamadas de atributos e funções de métodos
-
-    this:
-        é um comando interno da classe usado para referenciar, pra chamar atributos
-        e metodos da mesma classe
-
-    Instância:
-        é quando o objeto representa uma classe.
-
-       ex: let calculador = new calculadora 
-
-       tudo da classe esta dentro desse objeto.
-
-Quanto mais inteligente for sua classe mais limpo sera seu codigo
+Getters e Setters:
+    Sao métodos que permitem definir como acessar os valores
