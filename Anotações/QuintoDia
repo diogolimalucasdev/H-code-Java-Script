@@ -1,0 +1,29 @@
+QuerySelectorAll :
+    Seleciona todos os elementos diferente.
+    exemplo: document.QuerySelectorAll("#buttons > g, #parts > g")
+    Vai selecionar todos os filhos das classes
+
+addEventListener:
+    Escuta o evento
+
+Método addEventListenerAll:
+    faço com que eu possa ouvir varios eventos e coloco os parametros que eu quero
+
+ForEach:
+    para cada
+
+nomedaclasse.className:
+    para buscar apenas o nome da classe
+
+Replace: 
+    substitua
+    Se quando eu for pedir o nome da classe eu quiser retirar algum nome, uso o Replace
+    ex: console.log(nomedaclasse.className.baseVal.replace("btn-",""))
+
+    entre() eu digito o que eu quero retirar um virgula e o que eu quero no lugar
+
+split:
+    oquevocequerquetransforme.Serve pra transforma minha string em array, apartir disso consigo fazer um ForEach
+
+Mudar o estilo do curso em uma área clicável
+     btn.style.cursor = "pointer";
