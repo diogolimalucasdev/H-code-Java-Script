@@ -1,0 +1,143 @@
+class CalcControler {
+
+    constructor() {
+        this._locale = 'pt-BR' //crei um atributo pra hora
+        this._displayCalcEl = document.querySelector("#display");
+        this._dateEl = document.querySelector("#data");
+        this._timeEl = document.querySelector("#hora");
+        this._currentDate;
+        this.initialize();
+        this.initButtonsEvents();
+
+    }
+    initialize() {
+
+        this.setDisplayDateTime();
+
+        setInterval(() => { //Função executada em um intervalo de tempo
+
+            this.setDisplayDateTime(); //aqui eu chamo a fnção
+
+        }, 1000);    //aqui determino o espaço de tempo em mmilisegundos, que ele vai atualizar
+
+        /*   setTimeout(() => {
+                
+                    clearInterval(interval); // aqui eu faço com que o codigo pare apos 10 segundos
+                    //no caso eu paro a variavel de cima
+                
+                }, 10000); */
+
+
+
+
+
+    }
+    addEventListenerAll(element,events,fn){
+
+        events.split(' ').forEach(event =>{
+
+            //events pego todos os eventos
+            //.split eu transformo aqueeles parametros("drag e click") em arrays
+            //forEach passo por cada um elemento dentro do array
+            // e adiciono o evento em cada element
+            
+            element.addEventListener(event,fn,false); //O false serve para so um dos eventos ser dispparado
+
+        })
+    }
+
+    initButtonsEvents() {
+        
+        let buttons = document.querySelectorAll("#buttons > g, #parts > g"); // o "> " siginifica filho de buttons que é a classe
+        //atribuo buttons a uma variavel para poder utlizar o forEach como atributo da variavel
+        buttons.forEach((btn, index) => { 
+            //aqui eu faço que ele va no objeto (buttons) e verifique cada elemento
+            // aqui faço um forEach em todos os filhos de buttons e parts
+            //e adciono um evento para cada botaão
+            //btn é parametro pois todas as classes tem btn no inicio ou seja vai pegar todos
+            
+            this.addEventListenerAll(btn,"click drag", e => {
+                
+                console.log(btn.className.baseVal.replace("btn-", ""))
+            })
+        
+            this.addEventListenerAll(btn,"mouseover mouseup mousedown", e=>{
+
+                btn.style.cursor = "pointer"; //aqui eu mudo o estilo do mouse para saber que é uma area clicavel
+        
+            });
+
+       
+        })
+
+    }
+
+
+    setDisplayDateTime() {
+
+        this.displayDate = this.currentDate.toLocaleDateString(this._locale)
+        //criei um atributo pra hora
+
+        /* Poderia ser assim tbm 
+         this.displayDate = this.currentDate.toLocaleDateString(this._locale,{
+             day: "2-digit",
+             month: "long",
+             year: "numeric",
+         })
+         */
+
+
+        this.displayTime = this.currentDate.toLocaleTimeString(this._locale)
+
+    }
+
+    get displayDate() { // devolvo uma data pre estabelecida
+        return this._dateEl.innerHTML;
+
+    }
+    set displayDate(value) { // aletero a data
+        return this._dateEl.innerHTML = value;
+
+    }
+
+
+    get displayTime() {  // devolvo uma hora pre estabelecida
+
+        return this._timeEl.innerHTML;
+
+    }
+
+    set displayTime(value) {
+        // aletero a hora
+
+        return this._timeEl.innerHTML = value;
+
+    }
+
+
+
+    get displayCalc() {
+
+        //so devolve o que esta no atributo
+        return this._displayCalcEl.innerHTML;
+
+
+    }
+
+    set displayCalc(value) {
+        //altero um valor no meu atributo
+        this._displayCalcEl.innerHTML = value;
+
+    }
+
+    get currentDate() {
+
+        return new Date();
+    }
+
+    set currentDate(date) {
+
+        this.currentDate = date;
+
+    }
+}
